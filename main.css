@@ -749,3 +749,141 @@ area */
   width: 100%;
   filter: invert(100%);
 }
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 30px;
+}
+
+footer .container {
+  flex-direction: column;
+}
+
+footer .news {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+footer .news input {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  margin-right: 10px;
+  width: 30%;
+  color: #000;
+}
+
+footer .news button {
+  width: 10%;
+  box-shadow: 5px 5px 5px #313538;
+}
+
+footer .info {
+  display: flex;
+  margin-top: 50px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.info .box {
+    flex-basis: 25%;
+    padding: 10px 20px
+}
+
+.info .social i {
+  display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background: #faf3e7;
+   text-align: center;
+   color: #cc8c18;
+   transition: all 0.4s ease;
+}
+
+.info .social i:hover {
+  transform: translateY(3px);
+  cursor: pointer;
+}
+
+footer .box h1 {
+  margin-bottom: 10px;
+}
+
+footer .box h2 {
+  margin-bottom: 20px;
+}
+
+footer .box li {
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+footer .box li i {
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+footer .right .fas {
+  font-size: 1.3rem;
+  color: #CC8C18;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  margin-right: 12px;
+}
+
+footer .right .text {
+  opacity: 0.5;
+}
+
+footer .top {
+  margin-left: 250px;
+}
+
+footer .top a i {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer .top a {
+  display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 45px;
+   height: 45px;
+   border-radius: 50%;
+   background: #faf3e7;
+   text-align: center;
+   color: #cc8c18;
+}
+
+footer .bottom {
+  position: relative;
+}
+
+footer .bottom div {
+  bottom: 0;
+  text-align: center;
+  padding: 10px;
+  background: #627795;
+  opacity: 0.5;
+  letter-spacing: 3px;
+}
+
+footer .bottom span {
+  color: #ECE3D2;
+}
+
+footer .bottom a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
