@@ -73,6 +73,8 @@ header {
    background: #CC8C18;
    padding: 15px 0 15px 0;
    color: white;
+   border-bottom: 1px solid transparent;
+  transition: all .45s ease;
  }
 
  .navbar {
@@ -198,6 +200,7 @@ header {
    transition: 0.5s;
    top: 0;
    padding: 30px 0 0 0;
+   border-bottom: 1px solid #ffffff1a;
  }
 
  header.sticky ul li a {
@@ -215,6 +218,8 @@ header {
    /*------------head------------*/
    header.sticky {
      height: 8vh;
+     border-bottom: 1px solid #ddd;
+    transition: all 0.45s ease;
    }
  
    header.sticky .nav-menu {
@@ -260,7 +265,7 @@ header {
    header.sticky .sign .start a{
     display: none;
    } 
- 
+   
    .hamburger {
      display: block;
      cursor: pointer;
@@ -361,4 +366,187 @@ button i {
 
 button span {
   margin-top: 5px;
+}
+
+/* about */
+.about {
+  position: relative;
+  padding-bottom: 70px;
+  background: #313538;
+}
+
+.heading {
+  text-align: center;
+}
+
+.top {
+  margin-top: 80px;
+  display: flex;
+}
+
+.heading h5 {
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: #CC8C18;
+  padding-top: 20px;
+}
+
+.heading h2 {
+  color: #24416B;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+  letter-spacing: 3px;
+}
+
+.left, .right {
+  width: 50%;
+}
+
+h3 {
+  font-size: 35px;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.about .left {
+  padding: 20px;
+}
+
+p {
+  line-height: 30px;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.about .right {
+  position: relative;
+  z-index: 1;
+}
+
+.about .right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #CC8C18;
+  width: 92%;
+  height: 65vh;
+  z-index: -1;
+  margin: 30px;
+  box-shadow: 3px 3px 3px #000;
+}
+
+/* wrapper */
+
+/* .wrapper {
+  background-image: url(./w.jpg);
+  height: 80vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper .container {
+  max-width: 50%;
+  margin: auto;
+}
+
+.wrapper .item {
+  background: #fff;
+  padding: 50px;
+  margin-top: 15%;
+  border: 30px solid #F3F3F3;
+  border-bottom: none;
+}
+
+.wrapper .heading {
+  text-align: left;
+}
+
+.owl-carousel .owl-theme {
+
+} */
+
+/* wrapper */
+
+.wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.wrapper .grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.wrapper .box {
+  box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 5%);
+  padding: 20px;
+  transition: 0.5s;
+}
+
+.wrapper .box > i {
+  margin: 10px 0 15px;
+  color: #CC8C18;
+  font-size: 30px;
+}
+
+.wrapper h3 {
+  font-size: 20px;
+}
+
+.wrapper .arr i {
+  padding: 10px;
+  background: #F5E8D1;
+  color: #CC8C18;
+  border-radius: 50%;
+}
+
+.wrapper .box:hover {
+  background: #CC8C18;
+  cursor: pointer;
+}
+
+.wrapper .box:hover .arr i{
+  background-color: #fff;
+}
+
+.wrapper .box:hover p,
+.wrapper .box:hover h3,
+.wrapper .box:hover > i {
+  color: white;
+}
+
+/* room */
+
+.room {
+  /* width: 90%; */
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+}
+
+.mtop1 {
+  margin: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mtop1 h4 {
+  color: #24416B;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.room img {
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
 }
