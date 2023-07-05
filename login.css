@@ -147,6 +147,7 @@ body {
    height: 60px;
    font-size: 1.1rem;
    font-weight: 400;
+   margin-top: 10px;
    color: #313538;
    text-align: center;
    cursor: pointer;
@@ -159,14 +160,20 @@ body {
    background-color: #835d17;
 }
 
-.forgot{
-   padding: 20px;
-   text-align: center;
+.forgot1{
+   padding: 5px;
    color: #fff;
 }
 
+.forgot1 a,
 .forgot a{
    text-decoration: none;
    color: #24416B;
    font-size: 1rem;
+}
+
+.forgot {
+   text-align: center;
+   padding: 20px;
+   color: #313538;
 }
