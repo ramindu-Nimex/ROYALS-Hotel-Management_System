@@ -303,7 +303,7 @@ header {
 }
 
 .home {
-  background-image: url(./home.png);
+  background-image: url(images/home.png);
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -873,17 +873,19 @@ footer .bottom div {
   bottom: 0;
   text-align: center;
   padding: 10px;
-  background: #627795;
+  background: #fff;
   opacity: 0.5;
   letter-spacing: 3px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #313538;
 }
 
 footer .bottom span {
-  color: #ECE3D2;
+  color: #000;
 }
 
 footer .bottom a {
-  color: #000;
+  color: #CC8C18;
   font-weight: 600;
   text-decoration: none;
 }
