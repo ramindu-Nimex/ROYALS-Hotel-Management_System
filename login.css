@@ -91,7 +91,15 @@ body {
    height: 100px;
    margin: 0 auto;
    border-radius: 20%;
-
+   box-shadow: 
+    /* Logo Shadow */
+    0px 0px 2px #313538,
+    /* Offset */
+    0px 0px 0px 6px #835d17,
+    /* Bottom Right */
+    8px 8px 15px #CC8C18,
+    /* Top Left */
+    -8px -8px 20px #d1982f;
 }
 
 .title{
@@ -101,7 +109,7 @@ body {
    padding-top: 24px;
    letter-spacing: 0.5px;
    word-spacing: 1px;
-   color: #fcc4fc;
+   color: #24416B;
 }
 
 .fields{
@@ -126,7 +134,7 @@ body {
 
 .box > i{
    font-size: 1.1rem;
-   color: #fcb1fc;
+   color: #24416B;
    position: relative;
    left: 20px;
 }
@@ -148,7 +156,7 @@ body {
 }
 
 .sbtn:hover{
-   background-color: #d1982f;
+   background-color: #835d17;
 }
 
 .forgot{
@@ -159,6 +167,6 @@ body {
 
 .forgot a{
    text-decoration: none;
-   color: #fcc4fc;
+   color: #24416B;
    font-size: 1rem;
 }
