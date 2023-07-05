@@ -18,11 +18,34 @@
    </div>
 
    <div class="login">
+      <?php
+         include "config.php";
+         if(isset($_POST['login'])) {
+            $email = $_POST['email'];
+            $password = $_POST['passw'];
+
+            $sql = "SELECT * FROM user WHERE email = '$email'";
+            $result = mysqli_query($conn,$sql);
+            $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+            if($user) {
+               if(password_verify($password, $user["password"])) {
+                  header('location:main.php');
+                  die();
+               }
+               else {
+                  echo "passsword not match";
+               }
+            }
+            else {
+               die(mysqli_error($conn));
+            }
+         }
+      ?>
       <div class="logo"></div>
       <div class="title">ROYALS</div>
       <form action="" method="" class="fields">
          <div class="box">
-            <i class="fas fa-user"></i><input type="text" class="uni" name="uname" placeholder="User Name">
+            <i class="fa-solid fa-envelope"></i><input type="email" class="uni" name="email" placeholder="E-mail">
          </div>
 
          <div class="box">
@@ -35,7 +58,7 @@
 
          <input type="submit" name="login" value="Login" class="sbtn">
          <div class="forgot">
-            Not yet a member ? <a href="./register.html">Sign Up</a>
+            Not yet a member ? <a href="./register.php">Sign Up</a>
          </div>
       </form>
    </div> 
