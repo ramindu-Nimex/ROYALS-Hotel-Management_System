@@ -1,3 +1,16 @@
+<?php
+   // require "config.php";
+
+   // if(!empty($_SESSION["id"])) {
+   //    $id = $_SESSION["id"];
+   //    $sql = "SELECT * FROM user WHERE id = $id";
+   //    $result = mysqli_query($conn,$sql);
+   //    $row = mysqli_fetch_assoc($result);
+   // }
+   // else {
+   //    header("Location: logout.php");
+   // }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +67,9 @@
 
             <div class="sign">
                <a href="./register.php"><i class="fa-solid fa-user"></i></a>
+               <div class="start">
+                  <a href="./logout.php">Log Out</a>
+               </div>
                <div class="start">
                   <a href="#">Get Started</a>
                </div>

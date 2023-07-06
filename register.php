@@ -17,6 +17,10 @@
    <?php
    include "config.php";
 
+   if(!empty($_SESSION["id"])) {
+    header("Location: main.php");
+   }
+
    if(isset($_POST['submit'])) {
         $fullname = $_POST['fname'];
         $username = $_POST['uname'];
