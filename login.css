@@ -80,7 +80,7 @@ body {
    background-color: #CC8C18;
    box-shadow: 13px 13px 20px #835d17,
                 -13px -13px 25px #d1982f;
-   /* left: -120%; */
+   left: -120%;
    transition: all 0.5s ease-in;
 }
 

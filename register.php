@@ -19,6 +19,7 @@
 
    if(isset($_POST['submit'])) {
         $fullname = $_POST['fname'];
+        $username = $_POST['uname'];
         $email = $_POST['email'];
         $password = $_POST['passw'];
         $repeatpassword = $_POST['repassw'];
@@ -27,7 +28,7 @@
 
         $errors = array();
 
-        if(empty($fullname) OR empty($email) OR empty($password) OR empty($repeatpassword)) {
+        if(empty($fullname) OR empty($username) OR empty($email) OR empty($password) OR empty($repeatpassword)) {
             array_push($errors, "All fields are required");
         }
 
@@ -57,7 +58,7 @@
          }
         }
         else {
-            $sql = "INSERT INTO user(fullName, email, password) VALUES ('$fullname','$email','$password')";
+            $sql = "INSERT INTO user(fullName, userName,email, password) VALUES ('$fullname','$username','$email','$password')";
 
             $result = mysqli_query($conn,$sql);
 
@@ -76,6 +77,10 @@
         <form action="" method="post">
             <div class="box">
                 <i class="fas fa-user"></i><input type="text" class="uni" name="fname" placeholder="Full Name">
+            </div>
+
+            <div class="box">
+                <i class="fas fa-user"></i><input type="text" class="uni" name="uname" placeholder="User Name">
             </div>
 
             <div class="box">

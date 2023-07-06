@@ -1,3 +1,29 @@
+<?php
+   include "config.php";
+   if(isset($_POST['login'])) {
+      $usernameemail = $_POST['usernameemail'];
+      $password = $_POST['passw'];
+
+      $sql = "SELECT * FROM user WHERE userName = '$usernameemail' OR email = '$usernameemail'";
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_assoc($result);
+
+      if(mysqli_num_rows($result) > 0) {
+         if($password == $row["password"]) {
+            $_SESSION["login"] == true;
+            $_SESSION["id"] == $row["id"];
+            header("Location: main.php");
+         }
+         else {
+            echo "<script> alert('wrong password'); </script>";
+         }
+      }
+      else {
+         echo "<script> alert('User not registered'); </script>";
+      }
+   }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,33 +45,40 @@
 
    <div class="login">
       <?php
-         include "config.php";
-         if(isset($_POST['login'])) {
-            $email = $_POST['email'];
-            $password = $_POST['passw'];
+         // include "config.php";
+         // if(isset($_POST['login'])) {
+         //    $email = $_POST['email'];
+         //    $password = $_POST['passw'];
 
-            $sql = "SELECT * FROM user WHERE email = '$email'";
-            $result = mysqli_query($conn,$sql);
-            $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-            if($user) {
-               if(password_verify($password, $user["password"])) {
-                  header('location:main.php');
-                  die();
-               }
-               else {
-                  echo "passsword not match";
-               }
-            }
-            else {
-               die(mysqli_error($conn));
-            }
-         }
+         //    $sql = "SELECT * FROM user WHERE email = '$email'";
+         //    $result = mysqli_query($conn,$sql);
+            // $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+            // if($user) {
+            //    if(password_verify($password, $user["password"])) {
+            //       header('location:main.php');
+            //       die();
+            //    }
+            //    else {
+            //       echo "passsword not match";
+            //    }
+            // }
+            // else {
+            //    die(mysqli_error($conn));
+            // }
+
+         //    if($result) {
+         //       header('location:main.php');
+         //   }
+         //   else {
+         //       die(mysqli_error($conn));
+         //   }
+         // }
       ?>
       <div class="logo"></div>
       <div class="title">ROYALS</div>
-      <form action="" method="" class="fields">
+      <form action="" method="post" class="fields">
          <div class="box">
-            <i class="fa-solid fa-envelope"></i><input type="email" class="uni" name="email" placeholder="E-mail">
+            <i class="fas fa-user"></i><input type="email" class="uni" name="usernameemail" placeholder="UserName or E-mail">
          </div>
 
          <div class="box">
@@ -55,8 +88,9 @@
          <div class="forgot1">
             <a href="#">Forgot Password?</a>
          </div>
-
-         <input type="submit" name="login" value="Login" class="sbtn">
+         
+         <button name="login" class="sbtn">Login</button>
+         <!-- <input type="submit" name="login" value="Login" class="sbtn"> -->
          <div class="forgot">
             Not yet a member ? <a href="./register.php">Sign Up</a>
          </div>
