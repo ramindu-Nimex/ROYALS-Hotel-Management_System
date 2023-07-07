@@ -15,6 +15,7 @@
 <body>
    <div class="signup">
    <?php
+   session_start();
    include "config.php";
 
    if(!empty($_SESSION["id"])) {

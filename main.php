@@ -1,15 +1,16 @@
 <?php
-   // require "config.php";
+// session_start();
+//    include "config.php";
 
-   // if(!empty($_SESSION["id"])) {
-   //    $id = $_SESSION["id"];
-   //    $sql = "SELECT * FROM user WHERE id = $id";
-   //    $result = mysqli_query($conn,$sql);
-   //    $row = mysqli_fetch_assoc($result);
-   // }
-   // else {
-   //    header("Location: logout.php");
-   // }
+//    if(!empty($_SESSION["id"])) {
+//       $id = $_SESSION["id"];
+//       $sql = "SELECT * FROM user WHERE id = $id";
+//       $result = mysqli_query($conn,$sql);
+//       $row = mysqli_fetch_assoc($result);
+//    }
+//    else {
+//       header("Location: logout.php");
+//    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
