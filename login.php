@@ -13,8 +13,16 @@ session_start();
       if(mysqli_num_rows($result) > 0) {
          if($password == $row["password"]) {
             $_SESSION["login"] == true;
+            $_SESSION["userName"] == $userName;
             $_SESSION["id"] == $row["id"];
-            header("Location: main.php");
+
+            if ($row['account'] == 'admin') {
+               header('Location: admin.php'); // Redirect to admin page
+               exit();
+            } else {
+               header("Location: main.php"); // Redirect to customer page
+               exit();
+            }
          }
          else {
             echo "<script> alert('wrong password'); </script>";
@@ -80,7 +88,7 @@ session_start();
       <div class="title">ROYALS</div>
       <form action="" method="post" class="fields">
          <div class="box">
-            <i class="fas fa-user"></i><input type="email" class="uni" name="usernameemail" placeholder="UserName or E-mail">
+            <i class="fas fa-user"></i><input type="text" class="uni" name="usernameemail" placeholder="UserName or E-mail">
          </div>
 
          <div class="box">

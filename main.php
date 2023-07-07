@@ -1,6 +1,7 @@
 <?php
-// session_start();
-//    include "config.php";
+   include "config.php";
+   session_start();
+   // $User = $_SESSION["id"];
 
 //    if(!empty($_SESSION["id"])) {
 //       $id = $_SESSION["id"];

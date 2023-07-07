@@ -41,8 +41,8 @@
             array_push($errors, "E-mail is not valid");
         }
 
-        if(strlen($password) < 8 ) {
-            array_push($errors, "Password must be at least 8 character long");
+        if(strlen($password) < 4 ) {
+            array_push($errors, "Password must be at least 4 character long");
         }
 
         if($password !== $repeatpassword) {
