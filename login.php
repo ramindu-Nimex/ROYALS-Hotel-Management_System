@@ -1,20 +1,21 @@
 <?php
-session_start();
+   session_start();
    include "config.php";
 
    if(isset($_POST['login'])) {
-      $usernameemail = $_POST['usernameemail'];
-      $password = $_POST['passw'];
+      // $usernameemail = $_POST['usernameemail'];
+      $uname = $_POST['uname'];
+      $password = $_POST['password'];
 
-      $sql = "SELECT * FROM user WHERE userName = '$usernameemail' OR email = '$usernameemail'";
+      $sql = "SELECT * FROM users WHERE uname = '$uname' AND password = '$password'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_assoc($result);
 
       if(mysqli_num_rows($result) > 0) {
-         if($password == $row["password"]) {
-            $_SESSION["login"] == true;
-            $_SESSION["userName"] == $userName;
-            $_SESSION["id"] == $row["id"];
+         // if($password == $row["password"]) {
+            $_SESSION['loggedIn'] = true;
+            $_SESSION["uname"] = $uname;
+            $_SESSION['id'] = $row['user_ID'];
 
             if ($row['account'] == 'admin') {
                header('Location: admin.php'); // Redirect to admin page
@@ -23,13 +24,13 @@ session_start();
                header("Location: main.php"); // Redirect to customer page
                exit();
             }
-         }
-         else {
-            echo "<script> alert('wrong password'); </script>";
-         }
+         // }
+         // else {
+         //    echo "<script> alert('wrong password'); </script>";
+         // }
       }
       else {
-         echo "<script> alert('User not registered'); </script>";
+         echo "<script> alert('Invalid username or password!!'); </script>";
       }
    }
 
@@ -88,11 +89,11 @@ session_start();
       <div class="title">ROYALS</div>
       <form action="" method="post" class="fields">
          <div class="box">
-            <i class="fas fa-user"></i><input type="text" class="uni" name="usernameemail" placeholder="UserName or E-mail">
+            <i class="fas fa-user"></i><input type="text" class="uni" name="uname" placeholder="UserName">
          </div>
 
          <div class="box">
-            <i class="fas fa-key"></i><input type="password" class="pwi" name="passw" placeholder="Password">
+            <i class="fas fa-key"></i><input type="password" class="pwi" name="password" placeholder="Password">
          </div>
 
          <div class="forgot1">

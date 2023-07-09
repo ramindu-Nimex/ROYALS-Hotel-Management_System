@@ -162,6 +162,15 @@ header {
   transition: all 0.45s ease-in-out;
  }
 
+ header .sign .uname a {
+  margin-left: 40px;
+  color: #CC8C18;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.45s ease-in-out;
+ }
+
  header .sign i {
    color: #CC8C18;
    /* position: absolute; */

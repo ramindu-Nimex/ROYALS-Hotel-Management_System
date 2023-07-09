@@ -22,18 +22,18 @@
     header("Location: main.php");
    }
 
-   if(isset($_POST['submit'])) {
-        $fullname = $_POST['fname'];
-        $username = $_POST['uname'];
+   if(isset($_POST['signup'])) {
+        $fname = $_POST['fname'];
+        $uname = $_POST['uname'];
         $email = $_POST['email'];
-        $password = $_POST['passw'];
-        $repeatpassword = $_POST['repassw'];
+        $password = $_POST['password'];
+        $repassword = $_POST['repassword'];
 
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
         $errors = array();
 
-        if(empty($fullname) OR empty($username) OR empty($email) OR empty($password) OR empty($repeatpassword)) {
+        if(empty($fname) OR empty($uname) OR empty($email) OR empty($password) OR empty($repassword)) {
             array_push($errors, "All fields are required");
         }
 
@@ -45,11 +45,11 @@
             array_push($errors, "Password must be at least 4 character long");
         }
 
-        if($password !== $repeatpassword) {
+        if($password !== $repassword) {
             array_push($errors, "Password does not match");
         }
 
-        $sql = "SELECT * FROM user WHERE email = '$email'";
+        $sql = "SELECT * FROM users WHERE email = '$email'";
         $result2 = mysqli_query($conn,$sql);
         $rowCount = mysqli_num_rows($result2);
 
@@ -63,7 +63,7 @@
          }
         }
         else {
-            $sql = "INSERT INTO user(fullName, userName,email, password) VALUES ('$fullname','$username','$email','$password')";
+            $sql = "INSERT INTO users(fname, uname, email, password) VALUES ('$fname','$uname','$email','$password')";
 
             $result = mysqli_query($conn,$sql);
 
@@ -93,18 +93,18 @@
             </div>
 
             <div class="box">
-                <i class="fas fa-key"></i><input type="password" class="pwi" name="passw" placeholder="Password">
+                <i class="fas fa-key"></i><input type="password" class="pwi" name="password" placeholder="Password">
             </div>
 
             <div class="box">
-                <i class="fas fa-key"></i><input type="password" class="pwi" name="repassw" placeholder="Re Enter Password">
+                <i class="fas fa-key"></i><input type="password" class="pwi" name="repassword" placeholder="Re Enter Password">
             </div>
 
             <div class="check">
                 <input type="checkbox"  id="checkBox" class="inputStyle" onclick="enableButton()"> Accept Privacy policy and Terms
             </div>
 
-            <input type="submit" name="submit" value="Register" class="sbtn">  
+            <input type="submit" name="signup" value="Register" class="sbtn">  
             
             <div class="forgot">
                 Already Register ? <a href="./login.php">Login Here</a>

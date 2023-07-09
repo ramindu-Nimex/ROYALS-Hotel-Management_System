@@ -1,3 +1,8 @@
+<?php
+   include "config.php";
+   session_start();
+   $UserID = $_SESSION['id'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +20,7 @@
       <div class="sidebar-header">
          <h3 class="brand">
             <!-- <i class="fa-brands fa-squarespace"></i> -->
-            <span>Hey Admin</span>
+            <span>Welcome Admin</span>
          </h3>
          <label for="sidebar-toggle" class=""><i class="fa fa-list"></i></label>
       </div>
@@ -45,6 +50,7 @@
             </div>
             <i class="fa-solid fa-bell"></i>
             <i class="fa-regular fa-comment"></i>
+            <div class="uname"><?php echo $_SESSION['uname']; ?></div>
             <div class="admin-profile"></div>
          </div>
       </header>

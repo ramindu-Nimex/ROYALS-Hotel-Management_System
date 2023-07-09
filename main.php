@@ -1,7 +1,7 @@
 <?php
    include "config.php";
    session_start();
-   // $User = $_SESSION["id"];
+   $UserID = $_SESSION['id'];
 
 //    if(!empty($_SESSION["id"])) {
 //       $id = $_SESSION["id"];
@@ -30,6 +30,8 @@
          <div class="logo">
             <h1>ROY<span>ALS</span></h1>
          </div>
+
+         <h2>hey <?php echo $_SESSION['uname']; ?></h2>
          
          <div class="social">
             <i class="fab fa-facebook-f"></i>
@@ -74,6 +76,9 @@
                </div>
                <div class="start">
                   <a href="#">Get Started</a>
+               </div>
+               <div class="uname">
+                  <a href="#"><?php echo $_SESSION['uname']; ?></a>
                </div>
             </div>
 

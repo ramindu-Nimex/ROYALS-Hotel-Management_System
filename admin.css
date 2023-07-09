@@ -45,6 +45,11 @@
    cursor: pointer;
 }
 
+.sidebar-header .brand span {
+   color: var(--text-grey);
+   text-transform: uppercase;
+}
+
 .sidebar-menu {
    padding: 1rem;
 }
@@ -139,6 +144,10 @@ header {
 .social-icons .add-items a:hover {
    background: #ddd;
    color: #627795;
+}
+
+.social-icons .uname {
+   margin-left: 1.2rem;
 }
 
 .social-icons .admin-profile {
