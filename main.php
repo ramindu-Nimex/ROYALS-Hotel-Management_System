@@ -31,7 +31,7 @@
             <h1>ROY<span>ALS</span></h1>
          </div>
 
-         <h2>hey <?php echo $_SESSION['uname']; ?></h2>
+         <!-- <h2>hey <?php echo $_SESSION['uname']; ?></h2> -->
          
          <div class="social">
             <i class="fab fa-facebook-f"></i>
@@ -70,7 +70,7 @@
             </div>
 
             <div class="sign">
-               <a href="./register.php"><i class="fa-solid fa-user"></i></a>
+               <a href="./user_view.php"><i class="fa-solid fa-user"></i></a>
                <div class="start">
                   <a href="./logout.php">Log Out</a>
                </div>

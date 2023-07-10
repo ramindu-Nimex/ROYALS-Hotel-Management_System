@@ -188,7 +188,14 @@ header {
    width: 45px;
  }
 
- header .sticky_logo {
+ header.sticky  i,
+ header.sticky .sign .start a,
+ header.sticky .sign .uname a {
+  color: #313538;
+ }
+
+ header .sticky_logo,
+ header.sticky .head_contact {
    display: none;
  }
 
