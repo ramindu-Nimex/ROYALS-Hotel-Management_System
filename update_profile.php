@@ -26,7 +26,7 @@
          }
         }
         else {
-            $sql = "UPDATE users SET fname = '$fname', uname = '$uname', email = '$email' WHERE uname = '$uname'";
+            $sql = "UPDATE users SET fname = '$fname', uname = '$uname', email = '$email' WHERE id = '$id'";
 
             $result = mysqli_query($conn,$sql);
 
@@ -46,7 +46,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Update Profile</title>
-   <link rel="stylesheet" href="./register.css">
+   <link rel="stylesheet" href="./update_profile.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -76,10 +76,6 @@
 
             <div class="box">
                 <i class="fa-solid fa-envelope"></i><input type="email" class="uni" name="email" value='<?php echo $row['email']; ?>'>
-            </div>
-
-            <div class="check">
-                <input type="checkbox"  id="checkBox" class="inputStyle" onclick="enableButton()"> Accept Privacy policy and Terms
             </div>
 
             <input type="submit" name="update" value="Update" class="sbtn">  
