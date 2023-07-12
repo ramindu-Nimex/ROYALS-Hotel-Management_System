@@ -70,6 +70,7 @@ form {
 }
 
 .sbtn{
+   text-transform: uppercase;
    outline: none;
    border: none;
    background-color: #ddd;
@@ -88,4 +89,5 @@ form {
 
 .sbtn:hover{
    background-color: #24416B;
+   color: #ddd;
 }
