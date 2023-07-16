@@ -1,7 +1,7 @@
 <?php
    include "config.php";
    session_start();
-   $UserID = $_SESSION['id'];
+   $UserID = $_SESSION['user_ID'];
    $uname = $_SESSION["uname"];
 ?>
 
@@ -24,7 +24,7 @@
       <form action="">
          <?php
             include "config.php";
-            $sql = "SELECT * FROM users WHERE uname = '$uname'";
+            $sql = "SELECT * FROM users WHERE id = '$UserID'";
             $result = mysqli_query($conn, $sql);
 
             while($row = mysqli_fetch_assoc($result)) {

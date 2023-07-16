@@ -15,7 +15,7 @@
          // if($password == $row["password"]) {
             $_SESSION['loggedIn'] = true;
             $_SESSION["uname"] = $uname;
-            $_SESSION['id'] = $row['user_ID'];
+            $_SESSION['user_ID'] = $row['id'];
 
             if ($row['account'] == 'admin') {
                header('Location: admin.php'); // Redirect to admin page

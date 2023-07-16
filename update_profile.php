@@ -26,12 +26,12 @@
          }
         }
         else {
-            $sql = "UPDATE users SET fname = '$fname', uname = '$uname', email = '$email' WHERE id = '$id'";
+            $sql = "UPDATE users SET fname = '$fname', uname = '$uname', email = '$email' WHERE id = '$UserID'";
 
             $result = mysqli_query($conn,$sql);
 
             if($result) {
-                header('location:main.php');
+                header('location:user_view.php');
             }
             else {
                 die(mysqli_error($conn));

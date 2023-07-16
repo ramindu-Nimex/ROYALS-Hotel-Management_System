@@ -1,8 +1,7 @@
 <?php
    include "config.php";
    session_start();
-   $UserID = $_SESSION['id'];
-
+   $UserID = $_SESSION['user_ID'];
 //    if(!empty($_SESSION["id"])) {
 //       $id = $_SESSION["id"];
 //       $sql = "SELECT * FROM user WHERE id = $id";
@@ -75,7 +74,7 @@
                   <a href="./logout.php">Log Out</a>
                </div>
                <div class="start">
-                  <a href="#">Get Started</a>
+                  <a href="./slider.html">Get Started</a>
                </div>
                <div class="uname">
                   <a href="#"><?php echo $_SESSION['uname']; ?></a>
