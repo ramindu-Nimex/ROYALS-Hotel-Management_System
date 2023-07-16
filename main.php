@@ -69,7 +69,7 @@
             </div>
 
             <div class="sign">
-               <a href="./user_view.php"><i class="fa-solid fa-user"></i></a>
+               <a href="./view.php"><i class="fa-solid fa-user"></i></a>
                <div class="start">
                   <a href="./logout.php">Log Out</a>
                </div>

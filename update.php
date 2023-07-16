@@ -2,21 +2,20 @@
    session_start();
    include "config.php";
    $id = $_GET['edit'];
+   $UserID = $_SESSION['user_ID'];
 
-   if(!empty($_SESSION["id"])) {
-    header("Location: main.php");
-   }
+   // if(!empty($UserID)) {
+   //  header("Location: main.php");
+   // }
 
    if(isset($_POST['update'])) {
-        $fname = $_POST['fname'];
+        $name = $_POST['name'];
         $uname = $_POST['uname'];
         $email = $_POST['email'];
 
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-
         $errors = array();
 
-        if(empty($fname) OR empty($uname) OR empty($email)) {
+        if(empty($name) OR empty($uname) OR empty($email)) {
             array_push($errors, "All fields are required");
         }
 
@@ -26,12 +25,12 @@
          }
         }
         else {
-            $sql = "UPDATE users SET fname = '$fname', uname = '$uname', email = '$email' WHERE id = '$UserID'";
+            $sql = "UPDATE userproject SET name = '$name', uname = '$uname', email = '$email' WHERE id = '$UserID'";
 
             $result = mysqli_query($conn,$sql);
 
             if($result) {
-                header('location:user_view.php');
+                header('location:view.php');
             }
             else {
                 die(mysqli_error($conn));
@@ -46,7 +45,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Update Profile</title>
-   <link rel="stylesheet" href="./update_profile.css">
+   <link rel="stylesheet" href="css/update.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -61,13 +60,13 @@
         <?php
          include "config.php";
          $id = $_GET['edit'];
-         $sql = "SELECT * FROM users WHERE id=$id";
+         $sql = "SELECT * FROM userproject WHERE id=$UserID";
          $result = mysqli_query($conn,$sql);
          $row = mysqli_fetch_assoc($result);
 
          ?>
             <div class="box">
-                <i class="fas fa-user"></i><input type="text" class="uni" name="fname" value='<?php echo $row['fname']; ?>'>
+                <i class="fas fa-user"></i><input type="text" class="uni" name="name" value='<?php echo $row['name']; ?>'>
             </div>
 
             <div class="box">

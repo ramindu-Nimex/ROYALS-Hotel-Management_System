@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
+   box-sizing: border-box; 
+   text-decoration: none;
+}
+
+body {
+   height: 100vh;
+   width: 100vw;
+   font-weight: 400;
+   overflow-x: hidden;
+   padding: 20px;
+   background: #faf3e7;
+}
+
+.message{
+   margin:10px 0;
+   width: 100%;
+   border-radius: 5px;
+   padding:10px;
+   text-align: center;
+   background-color: #e74c3c;
+   color: #fff;
+   font-size: 20px;
+}
+
+.signup {
+   position: relative;
+   width: 400px;
+   padding: 50px;
+   margin: 20px auto;
+   background: #faf3e7;
+   box-shadow: 13px 13px 20px #ddd,
+                -13px -13px 25px #f5f2f2;
+   transition: all 0.5s ease-in;
+}
+
+.signup h1 {
+   text-align: center;
+   font-weight: 700;
+   padding-top: 16px;
+   letter-spacing: 2px;
+   color: #24416B;
+}
+
+form {
+   width: 100%;
+   margin-top: 40px;
+}
+
+.box{
+   margin-bottom: 30px;
+   box-shadow: inset 8px 8px 6px #ddd,
+               inset -8px -8px 6px #fff;
+}
+
+.box input{
+   border: none;
+   outline: none;
+   background: none;
+   font-size: 1.05rem;
+   color: #313538;
+   padding: 20px 10px 20px 35px;
+}
+
+.box > i{
+   font-size: 1.1rem;
+   color: #24416B;
+   position: relative;
+   left: 20px;
+}
+
+.sbtn{
+   outline: none;
+   border: none;
+   background-color: #ddd;
+   width: 100%;
+   height: 60px;
+   font-size: 1.1rem;
+   font-weight: 400;
+   color: #313538;
+   text-align: center;
+   margin-top: 30px;
+   cursor: pointer;
+   box-shadow: 8px 8px 20px #f5f2f2,
+               -8px -8px 30px #fff;
+   transition: all 0.3s ease-in;
+}
+
+.sbtn:hover{
+   background-color: #24416B;
+   color: #ddd;
+}
+
+.forgot{
+   padding: 20px;
+   text-align: center;
+   color: #24416B;
+}
+
+.forgot a{
+   text-decoration: none;
+   color: #313538;
+   font-size: 1rem;
+}
