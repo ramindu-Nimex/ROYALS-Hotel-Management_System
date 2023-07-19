@@ -136,6 +136,26 @@ body {
    border: 1px solid #eaeaea;
 }
 
-h1 {
+.package {
+   position: relative;
+   flex-wrap: wrap;
    margin-top: 50rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
 }
+
+.package .card {
+   position: relative;
+   width: 320px;
+   height: 450px;
+   margin: 20px;
+   background: #232323;
+   border-radius: 20px;
+   overflow: hidden;
+   cursor: pointer;
+   transition: all 0.6s ease-in;
+}
+
