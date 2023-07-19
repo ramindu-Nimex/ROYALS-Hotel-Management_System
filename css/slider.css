@@ -1,6 +1,6 @@
 body {
    background: #eaeaea;
-   overflow: hidden;
+   /* overflow: hidden; */
 }
 
 .container {
@@ -134,4 +134,8 @@ body {
    background: #555;
    color: #eaeaea;
    border: 1px solid #eaeaea;
+}
+
+h1 {
+   margin-top: 50rem;
 }
